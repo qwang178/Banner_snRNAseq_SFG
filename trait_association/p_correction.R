@@ -1,0 +1,10 @@
+data<-read.csv(file="p.txt",sep="\t",header=F)
+colnames(data)=c("comp","p")
+data$adj.BH<-p.adjust(data$p, method = "BH")
+data$adj.BY<-p.adjust(data$p, method = "BY")
+data$adj.holm<-p.adjust(data$p, method = "holm")
+data$adj.hochberg<-p.adjust(data$p, method = "hochberg")
+data$adj.hommel<-p.adjust(data$p, method = "hommel")
+data$adj.bonferroni<-p.adjust(data$p, method = "bonferroni")
+write.csv(file="p.corrected.csv",data,quote=F)
+
