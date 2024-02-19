@@ -1,0 +1,4 @@
+Banner snRNAseq preprocessing in Seurat
+
+norm_sample_1.R: representative normalization for sample_1
+integrate.R: integration of all the normalized samples, annotation
