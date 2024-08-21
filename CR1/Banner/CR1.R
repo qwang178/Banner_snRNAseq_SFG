@@ -21,7 +21,7 @@ m3<-lm(CR1~rs11118328_dosage*updatedDX + race + gender + expired_age + PMI,data=
 capture.output(summary(m3), file = "rs11118328.output.txt", append =T)
 
 m_all<-lm(CR1~rs11118328_dosage+rs9429780_dosage+rs679515_dosage+updatedDX + race + gender + expired_age + PMI,data=CR1_geno)
-capture.output(summary(m_all), file = "all.output.txt"
+capture.output(summary(m_all), file = "all.output.txt", append = T)
 
 CR1_geno$rs679515_genotype=CR1_geno$rs679515_dosage
 CR1_geno$rs11118328_genotype=CR1_geno$rs11118328_dosage
